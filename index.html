@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>华夏健康人生</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery.min.js"></script>
+	<script>
+		var deviceWidth = $(window).width()
+		var fontSize = deviceWidth / 1440 * 100 + 'px'
+		$('html').css('font-size',fontSize)
+
+		$(window).resize(function(){
+			deviceWidth = $(window).width()
+			fontSize = deviceWidth / 1440 * 100 + 'px'
+			$('html').css('font-size',fontSize)
+		});
+	</script>
+	<script src="js/layer/layer.js"></script>
+</head>
+<body>
+	<div class="header">
+		<img src="img/logo.png" alt="" class="logo">
+		<div class="big-title">保险神器</div>
+		<div class="small-title">您的贴身保险顾问</div>
+		<div class="anchors anchors-strength" onclick="toModule('strength')">产品优势</div>
+		<div class="anchors anchors-case"  onclick="toModule('case')">投保案例</div>
+		<div class="anchors anchors-provision" onclick="toModule('provision')">条款查看</div>
+		<div class="anchors anchors-aboutus"  onclick="toModule('aboutus')">关于我们</div>
+		<div class="anchors anchors-order"  onclick="toModule('order')">一键预约</div>
+		<img src="img/hot.jpg" alt="" class="hot">
+		<div class="button" onclick="toModule('order')">立即预约</div>
+		<img src="img/details.png" alt="" class="details">
+		<img src="img/half_price.png" alt="" class="half-price">
+	</div>
+
+	<div class="charts">
+		<div class="introduction">重疾发病率已经高达<span style="color:#fc7865;font-weight:bold;">72.18％</span>&nbsp;&nbsp;&nbsp;&nbsp;高额的治疗费用会压垮一个家庭重疾高发时代&nbsp;&nbsp;&nbsp;&nbsp;您需要的是一份高性价比&nbsp;<span style="font-size:0.32rem;font-weight:bold;color:#33bbff;">全面型保险</span><br>健康人生&nbsp;&nbsp;&nbsp;&nbsp;首年保费乐享&nbsp;<span style="color:#33bbff;font-weight:bold;font-size:0.36rem;">5折</span>&nbsp;优惠</div>
+		<img src="img/charts.png" alt="" class="photograph">
+	</div>
+	
+	<div class="strength" id="strength">
+		<div class="title" >
+			保费低&nbsp;&nbsp;&nbsp;&nbsp;保障全&nbsp;&nbsp;&nbsp;&nbsp;就是这么贴心
+		</div>
+
+		<div class="strength-title">
+			我们的优势
+		</div>
+
+		<img src="img/strength1.png" alt="" class="strength-chart strength-chart1">
+		<img src="img/strength2.png" alt="" class="strength-chart strength-chart2">
+		<img src="img/strength3.png" alt="" class="strength-chart strength-chart3">
+		<img src="img/strength4.png" alt="" class="strength-chart strength-chart4">
+
+
+		<div class="compare-title">产品对比</div>
+
+		<table>
+			<tr>
+				<th>保险项目</th>
+				<th>华夏健康人生</th>
+				<th>主流重疾产品:**福</th>
+				<th>主流重疾产品:康宁**</th>
+			</tr> 
+			
+			<tr>
+				<td>保险金额</td>
+				<td>30万</td>
+				<td>30万</td>
+				<td>30万</td>
+			</tr>
+			<tr>
+				<td>交费期间</td>
+				<td>20年</td>
+				<td>20年</td>
+				<td>20年</td>
+			</tr>
+			<tr>
+				<td>投保年龄</td>
+				<td>0～60 周岁</td>
+				<td>18～65 周岁</td>
+				<td>0～60 周岁</td>
+			</tr>
+			<tr>
+				<td>等待期</td>
+				<td>90天</td>
+				<td>90天</td>
+				<td>90天</td>
+			</tr>
+			<tr>
+				<td>保险期间</td>
+				<td>终身</td>
+				<td>终身</td>
+				<td>终身</td>
+			</tr>
+			<tr>
+				<td>年交保费<span style="font-size:0.15rem;">（30岁男性）</span></td>
+				<td><span style="color:#33bbff;font-weight:bold;">6966<br>活动期间享5折<br>首年仅需<span style="font-size:0.25rem;">3483</span>元</span></td>
+				<td>9490</td>
+				<td>9450</td>
+			</tr>
+			<tr>
+				<td>重疾保障</td>
+				<td><span style="color:#33bbff;">77种</span></td>
+				<td>45种</td>
+				<td>40种</td>
+			</tr>
+			<tr>
+				<td>轻症保障</td>
+				<td><span style="color:#33bbff;">33种 6万 额外给付5次</span></td>
+				<td>8种 6万 额外给付1次</td>
+				<td>10种 6万主险等额扣除</td>
+			</tr>
+			<tr>
+				<td>身故保障</td>
+				<td>30万</td>
+				<td>30万</td>
+				<td>30万</td>
+			</tr>
+			<tr>
+				<td>疾病终末期</td>
+				<td><span style="color:#33bbff;">30万</span></td>
+				<td>无</td>
+				<td>无</td>
+			</tr>
+			<tr>
+				<td>意外</td>
+				<td>全残30万</td>
+				<td>伤残30万<br>公共基础意外60万</td>
+				<td>高度残疾30万</td>
+			</tr>
+			<tr>
+				<td>被保险人轻症豁免保费</td>
+				<td><span style="color:#33bbff;">有</span></td>
+				<td>无</td>
+				<td>无</td>
+			</tr>
+			<tr>
+				<td>就医绿色通道</td>
+				<td>有</td>
+				<td>有</td>
+				<td>有</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="case" id="case">
+		<div class="title" >幸福生活&nbsp;&nbsp;&nbsp;&nbsp;因为<span style="color:#33bbff;font-weight:bold;">健康一生</span></div>
+		<div class="details">30岁的王先生为自己购买了一份华夏健康人生重大疾病保险，保险金额50万元，20年交，每年交费11610元（首年5805元），即可享受如下保障：</div>
+		<img src="img/case.png" alt="" class="chart">
+	</div>
+
+	<div class="provision" id="provision">
+		<div class="title" >保险条款&nbsp;&nbsp;&nbsp;&nbsp;快速查看</div>
+		<div class="pdf pdf1">华夏健康人生重大疾病保险条款 >></div>
+		<div class="pdf pdf2">附加投保人豁免保费重大疾病保险条款 >></div>
+		<div class="pdf pdf3">华夏绿通服务及标准单页介绍 >></div>		
+	</div>
+
+	<div class="aboutus" id="aboutus">
+		<div class="title" >关于我们</div>
+		<div class="introduction">保险神器（隶属于北京财未来科技有限公司）是一家致力于缔造保险业良性生态环境的科技公司。我们在为代理人提供移动展业平台的同时，为广大普通保险客户提供保险产品咨询、销售代理服务，让客户得到最适宜的保障。</div>
+		<a href="http://www.baoxianshenqi.cn"><div class="button">了解更多 ></div></a>
+	</div>
+
+	<div class="order" id="order">
+		<div class="title" >贴心保障&nbsp;&nbsp;&nbsp;&nbsp;一键预约</div>
+		<div class="explain">如果您想详细了解华夏健康人生重大疾病保险产品，请填写手机号码并点击“立即预约”，<br>客服人员将尽快为您提供详尽的咨询服务。</div>
+		<div class="label label-name" >如何称呼您</div>
+		<input type="text" class="name" placeholder="请输入您的姓名" id="name">
+		<div class="label label-phone" >联系电话</div>
+		<input type="text" class="phone" placeholder="请输入您的手机号码" id="phone">
+		<input type="text" class="captcha" placeholder="请输入验证码" id="captcha">
+		<div class="getCaptcha" onclick="getVerification()">获取验证码</div>
+		<div class="button" onclick="order()" id="orderBtn">立即预约</div>
+	</div>
+
+	<div class="order-success" style="display:none;">
+		<div class="title" >贴心保障&nbsp;&nbsp;&nbsp;&nbsp;一键预约</div>
+		<img src="img/success.png" alt="" class="success">
+		<div class="prompt">恭喜您，预约成功！</div>
+		<div class="details">客服人员将尽快为您提供咨询服务</div>
+	</div>
+
+
+	<div class="footer">
+		<div class="company">北京财未来科技有限公司</div>
+		<div class="details consult-email">咨询邮箱：fanshen@financingfeature.com</div>
+		<div class="details joinus-email">招聘邮箱：luzhihui@financingfeature.com</div>
+		<div class="details address">公司地址：北京市东城区东直门天恒大厦1002</div>
+		<div class="details protection"><span style="color:black;">©️</span>北京财未来科技有限公司2016版权所有 京ICP备15059948号</div>
+		<div class="details wechart">客服微信：pieerepeng</div>
+		<div class="details qq">官方QQ群：390692273</div>
+		<div class="details telephone">联系方式：010-53636654</div>
+		<img src="img/download.png" alt="" class="qrcode download">
+		<div class="details download">iOS&Android</div>
+		<img src="img/public.png" alt="" class="qrcode public">
+		<div class="details public">微信关注我们</div>
+	</div>
+	
+
+
+	<script>
+
+
+		
+
+		const IP = '182.254.212.33'
+		const PRODUCTID = '1007167'
+		var phone = ''
+        var verification_code = ''
+        var name = ''
+
+        var captchaSwitch = true
+        var orderSwitch = true
+
+        function order(){
+
+        	if(!orderSwitch){
+        		alert('failure')
+        		return
+        	}
+
+          	phone = $('#phone').val()
+          	verification_code = $('#captcha').val() 
+          	name = $('#name').val()
+
+          	if(validateName()){
+          		return
+          	} 
+
+          	if(validatePhone()){
+            	return
+          	}
+
+          	if(validateCode()){
+            	return
+          	}
+
+          	register(phone,verification_code)
+      	}
+
+      	function register(phone,verification_code){
+
+
+      		var postData = {
+              phonenumber:phone,
+              code:verification_code
+            }
+
+            $.ajax({
+                data: postData,
+                type: "GET",
+                url: 'http://'+IP+':3000/user_login',
+                dataType: 'json',
+                cache: false,
+                timeout: 5000,
+                success: function(data){
+                  // $('#orderBtn').toggleClass('disabled')
+                  // console.log('-------------------register-------------------')
+                  // console.log(data)
+                  var result = data.code
+                  if(result==3){
+                    layer.tips('验证码不正确，请重新输入', '#captcha', {
+					  tips: [4, '#f90'],
+					  time: 4000
+					});
+                    $('#captcha').val('')
+                  }else if(result==0){
+                    // $('.registerPage').hide()
+                    // $('.successPage').show()
+                    var acesstoken = data.acesstoken
+                    var userid = data.userid 
+                    updateName(userid,acesstoken)
+                  }else{
+                  	fail()
+                  }
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                   console.log(textStatus + " " + errorThrown);  
+                }
+            });
+      	}
+
+
+      	function updateName(userid,acesstoken){
+      		orderSwitch = !orderSwitch
+            $('#orderBtn').toggleClass('disabled')
+
+      		var postData = {
+      			userid:userid,
+      			acesstoken:acesstoken,
+      			name:'username',
+      			value:name
+      		}
+
+      		$.ajax({
+                data: postData,
+                type: "post",
+                url: 'http://'+IP+':3000/user_update_profile',
+                dataType: 'json',
+                cache: false,
+                timeout: 5000,
+                success: function(data){
+                	// console.log('-------------------updateName-------------------')
+                	// console.log(data)
+                  // $('#orderBtn').toggleClass('disabled')
+                  if(data.code == 0){
+                  	add_yuyue(userid,acesstoken)
+                  }else{
+                  	fail()
+                  }
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                   console.log(textStatus + " " + errorThrown);  
+                }
+            });
+
+      	}
+
+      	function add_yuyue(userid,acesstoken){
+      		var postData={
+      			userid:userid,
+      			acesstoken:acesstoken,
+      			productid:PRODUCTID
+      		}
+
+      		$.ajax({
+                data: postData,
+                type: "post",
+                url: 'http://'+IP+':3000/add_yuyue ',
+                dataType: 'json',
+                cache: false,
+                timeout: 5000,
+                success: function(data){
+                	// console.log('-------------------add_yuyue-------------------')
+                	// console.log(data)
+                   // console.log(data)
+                   if(data.code==0){
+                   		$('.order').hide()
+						$('.order-success').show()
+                    }else{
+                  		fail()
+                    }
+                  // $('#orderBtn').toggleClass('disabled')
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                   console.log(textStatus + " " + errorThrown);  
+                }
+            });
+      	}
+
+	</script>
+
+	<script>
+		function fail(){
+            $('#orderBtn').toggleClass('disabled')
+            layer.tips('预约失败，请尝试重新预约！', '#orderBtn', {
+			  tips: [4, '#f90'],
+			  time: 4000
+			});
+		}
+
+		function getVerification(){
+			if(!captchaSwitch){
+				alert('failure')
+				return
+			}
+          	phone = $('#phone').val()
+          	if(validatePhone()){
+          	  return
+          	}
+          	
+          	captchaSwitch = !captchaSwitch
+          	$('.getCaptcha').toggleClass('disabled')
+
+          	setTimeout(function(){
+          	  $('.getCaptcha').toggleClass('disabled')
+          	},10000)
+
+            var postData = {
+                phonenumber:phone,
+                channel:'weixin'
+            }
+            $.ajax({
+                data: postData,
+                type: "GET",
+                url: 'http://'+IP+':3000/user_send_active_code',
+                dataType: 'json',
+                cache: false,
+                timeout: 5000,
+                success: function(data){
+                  // console.log(data)
+                  // if(data.isnew==0){
+                    // Don't need to register.
+                  // }
+                }
+                ,
+                error: function(jqXHR, textStatus, errorThrown){
+                   console.log(textStatus + " " + errorThrown);  
+                }
+            });
+        }
+
+		function toModule(id){
+	      var top = $('#'+id).offset().top;
+	      // if(id=="mainTittle"){
+	      //   top = 0        
+	      // }
+	      $("html,body").animate({scrollTop:top},1000);
+	    }
+
+	    function validateName(){
+	    	if(!name){
+	    		layer.tips('请填写姓名', '#name', {
+				  tips: [4, '#f90'],
+				  time: 4000
+				});
+				return true
+	    	}else if(!checkName(name)){
+	    		layer.tips('名字太长，请重新输入', '#name', {
+				  tips: [4, '#f90'],
+				  time: 4000
+				});
+				return true
+	    	}
+	    	return false
+
+	    }
+
+        function validatePhone(){
+          	if(!phone){
+	            layer.tips('请填写手机号', '#phone', {
+				  tips: [4, '#f90'],
+				  time: 4000
+				});
+            	return true
+          	}else if(!checkMobile(phone)){
+	            layer.tips('手机号不合法，请重新输入', '#phone', {
+				  tips: [4, '#f90'],
+				  time: 4000
+				});
+	            return true
+          	}
+          	return false
+        }
+
+        function validateCode(){
+          	if(!verification_code){
+            	layer.tips('请填写验证码', '#captcha', {
+				  tips: [4, '#f90'],
+				  time: 4000
+				});
+            	return true
+          	}else if(!checkCode(verification_code)){
+            	layer.tips('验证码不合法，请重新输入', '#captcha', {
+				  tips: [4, '#f90'],
+				  time: 4000
+				});
+            	$('#code').val('')
+            	return true
+          	}
+          	return false
+        }
+
+        function checkName(value){
+        	if(value.length>10){
+        		return false
+        	}
+        	return true
+        }
+
+        function checkMobile(value){
+          	var reg =/^\d{11}$/g
+          	if(!reg.test(value)){
+              	return false;
+          	}
+          	return true
+        }
+
+        function checkCode(value){
+          	var reg =/^\d{4}$/g
+          	if(!reg.test(value)){
+              	return false;
+          	}
+          	return true
+        }
+	</script>
+
+
+
+
+	
+</body>
+</html>
