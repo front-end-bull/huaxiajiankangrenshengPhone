@@ -4,31 +4,110 @@
 	<meta charset="UTF-8">
 	<title>华夏健康人生</title>
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script src="js/jquery.min.js"></script>
 	<script>
 		var deviceWidth = $(window).width()
 		var fontSize = deviceWidth / 1440 * 100 + 'px'
 		$('html').css('font-size',fontSize)
 
-		$(window).resize(function(){
-			deviceWidth = $(window).width()
-			fontSize = deviceWidth / 1440 * 100 + 'px'
-			$('html').css('font-size',fontSize)
-		});
+		// $(window).resize(function(){
+		// 	deviceWidth = $(window).width()
+		// 	fontSize = deviceWidth / 1440 * 100 + 'px'
+		// 	$('html').css('font-size',fontSize)
+		// });
+	</script>
+
+	<script>
+		var phoneWidth = parseInt(window.screen.width);
+		// if(phoneWidth>=1000){
+		//   window.location.href = 'http://www.baoxianshenqi.cn'
+		// }
+		// var titleArr = []
+		if(phoneWidth<1000){
+		  // titleArr.push("互联网＋保险的探索者，<br>致力于创造最好用的展业工具")
+		  var phoneScale = phoneWidth/375;
+		  console.log(phoneScale)
+		  var ua = navigator.userAgent;
+		  if (/Android (\d+\.\d+)/.test(ua)){
+		      var version = parseFloat(RegExp.$1);
+		      if(version>2.3){
+		          document.write('<meta name="viewport" content="width=375,  user-scalable=no,minimum-scale = '+phoneScale+'	maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+		      }else{
+		          document.write('<meta name="viewport" content="width=375, user-scalable=no,target-densitydpi=device-dpi">');
+		      }
+		  } else {
+		      document.write('<meta name="viewport" content="width=375, user-scalable=no,target-densitydpi=device-dpi">');
+		  }
+		}else{
+		      // titleArr.push("互联网＋保险的探索者，致力于创造最好用的展业工具")
+		      document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
+		}
 	</script>
 	<script src="js/layer/layer.js"></script>
 </head>
 <body>
-	<div class="header">
-		<img src="img/logo.png" alt="" class="logo">
-		<div class="big-title">保险神器</div>
-		<div class="small-title">您的贴身保险顾问</div>
-		<div class="anchors anchors-strength" onclick="toModule('strength')">产品优势</div>
-		<div class="anchors anchors-case"  onclick="toModule('case')">投保案例</div>
-		<div class="anchors anchors-provision" onclick="toModule('provision')">条款查看</div>
-		<div class="anchors anchors-aboutus"  onclick="toModule('aboutus')">关于我们</div>
-		<div class="anchors anchors-order"  onclick="toModule('order')">一键预约</div>
-		<img src="img/hot.jpg" alt="" class="hot">
+
+	
+
+
+	<div id="topBanner">
+		  <img src="img/logo.png" alt="" class="logo">
+
+	      <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar bar1"></span>
+	        <span class="icon-bar bar2"></span>
+	        <span class="icon-bar bar3"></span>
+	      </button>
+	    
+	</div>
+
+	  	<div class="collapse navbar-collapse">
+	        <ul class="nav navbar-nav navbar-right navbar-uppercase">
+				<li>
+	              	<a href="javascript:void(0)" onclick="toModule('header')">
+	              	首页
+	              	</a>
+	         	</li>
+
+		        <li>
+		            <a href="javascript:void(0)" onclick="toModule('strength')">
+		            产品优势
+		            </a>
+		        </li>
+		          
+		        <li>
+		            <a href="javascript:void(0)" onclick="toModule('case')">
+		            投保案例
+		            </a>
+		        </li>
+
+		        <li>
+		            <a href="javascript:void(0)" onclick="toModule('provision')">
+		            条款查看
+		            </a>
+		        </li>
+		        <li>
+		            <a href="javascript:void(0)" onclick="toModule('aboutus')">
+		            关于我们
+		            </a>
+		        </li>
+		        <li>
+		            <a href="javascript:void(0)" onclick="toModule('order')">
+		            一键预约
+		            </a>
+		        </li>
+	        </ul>
+	    </div>
+
+<div class="wrapper">
+	<div class="header" id="header">
+		<!-- <img src="img/logo.png" alt="" class="logo"> -->
+		<!-- <div class="big-title">保险神器</div> -->
+		<!-- <div class="small-title">您的贴身保险顾问</div> -->
+		<!-- <img src="img/hot.jpg" alt="" class="hot"> -->
 		<div class="button" onclick="toModule('order')">立即预约</div>
 		<img src="img/details.png" alt="" class="details">
 		<img src="img/half_price.png" alt="" class="half-price">
@@ -41,7 +120,7 @@
 	
 	<div class="strength" id="strength">
 		<div class="title" >
-			保费低&nbsp;&nbsp;&nbsp;&nbsp;保障全&nbsp;&nbsp;&nbsp;&nbsp;就是这么贴心
+			保费低&nbsp;&nbsp;保障全&nbsp;&nbsp;就是这么贴心
 		</div>
 
 		<div class="strength-title">
@@ -60,8 +139,8 @@
 			<tr>
 				<th>保险项目</th>
 				<th>华夏健康人生</th>
-				<th>主流重疾产品:**福</th>
-				<th>主流重疾产品:康宁**</th>
+				<th>主流重疾产品<br>**福</th>
+				<th>主流重疾产品<br>康宁**</th>
 			</tr> 
 			
 			<tr>
@@ -95,7 +174,7 @@
 				<td>终身</td>
 			</tr>
 			<tr>
-				<td>年交保费<span style="font-size:0.15rem;">（30岁男性）</span></td>
+				<td>年交保费<span style="font-size:0.15rem;"><br>参照30岁男性</span></td>
 				<td><span style="color:#33bbff;font-weight:bold;">6966<br>活动期间享5折<br>首年仅需<span style="font-size:0.25rem;">3483</span>元</span></td>
 				<td>9490</td>
 				<td>9450</td>
@@ -108,9 +187,9 @@
 			</tr>
 			<tr>
 				<td>轻症保障</td>
-				<td><span style="color:#33bbff;">33种 6万 额外给付5次</span></td>
-				<td>8种 6万 额外给付1次</td>
-				<td>10种 6万主险等额扣除</td>
+				<td><span style="color:#33bbff;">33种 6万 <br>额外给付5次</span></td>
+				<td>8种 6万 <br>额外给付1次</td>
+				<td>10种 6万<br>主险等额扣除</td>
 			</tr>
 			<tr>
 				<td>身故保障</td>
@@ -127,11 +206,11 @@
 			<tr>
 				<td>意外</td>
 				<td>全残30万</td>
-				<td>伤残30万<br>公共基础意外60万</td>
+				<td>伤残30万<br>公共基础意外<br>60万</td>
 				<td>高度残疾30万</td>
 			</tr>
 			<tr>
-				<td>被保险人轻症豁免保费</td>
+				<td>被保险人轻症<br>豁免保费</td>
 				<td><span style="color:#33bbff;">有</span></td>
 				<td>无</td>
 				<td>无</td>
@@ -166,7 +245,7 @@
 
 	<div class="order" id="order">
 		<div class="title" >贴心保障&nbsp;&nbsp;&nbsp;&nbsp;一键预约</div>
-		<div class="explain">如果您想详细了解华夏健康人生重大疾病保险产品，请填写手机号码并点击“立即预约”，<br>客服人员将尽快为您提供详尽的咨询服务。</div>
+		<div class="explain">如果您想详细了解华夏健康人生重大疾病保险产品，<br>请填写手机号码并点击“立即预约”，<br>客服人员将尽快为您提供详尽的咨询服务。</div>
 		<div class="label label-name" >如何称呼您</div>
 		<input type="text" class="name" placeholder="请输入您的姓名" id="name">
 		<div class="label label-phone" >联系电话</div>
@@ -191,15 +270,34 @@
 		<div class="details address">公司地址：北京市东城区东直门天恒大厦1002</div>
 		<div class="details protection"><span style="color:black;">©️</span>北京财未来科技有限公司2016版权所有 京ICP备15059948号</div>
 		<div class="details wechart">客服微信：pieerepeng</div>
-		<div class="details qq">官方QQ群：390692273</div>
+		<div class="details qq">官方qq群：390692273</div>
 		<div class="details telephone">联系方式：010-53636654</div>
 		<img src="img/download.png" alt="" class="qrcode download">
 		<div class="details download">iOS&Android</div>
 		<img src="img/public.png" alt="" class="qrcode public">
 		<div class="details public">微信关注我们</div>
 	</div>
+</div>	
 	
-
+	<script>
+		  	var $toggle = $('#menu-toggle')
+		    var $html = $('html')
+		    var firstToggle = true
+		    $toggle.click(function(){
+		      if(firstToggle){
+		         setTimeout(function(){
+		                    $toggle.addClass('toggled');
+		                }, 580);
+		        $html.addClass('nav-open')
+		      }else{
+		         setTimeout(function(){
+		                    $toggle.removeClass('toggled');
+		                 }, 550);
+		        $html.removeClass('nav-open')
+		      }
+		      firstToggle = !firstToggle
+		    })
+	</script>
 
 	<script>
 
@@ -405,9 +503,9 @@
 
 		function toModule(id){
 	      var top = $('#'+id).offset().top;
-	      // if(id=="mainTittle"){
-	      //   top = 0        
-	      // }
+	      if(id!="header"){
+	        top -= 56        
+	      }
 	      $("html,body").animate({scrollTop:top},1000);
 	    }
 
