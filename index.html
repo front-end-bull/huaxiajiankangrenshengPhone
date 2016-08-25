@@ -8,22 +8,23 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script src="js/jquery.min.js"></script>
 	<script>
+
+		var phoneWidth = parseInt(window.screen.width);
+		if(phoneWidth>=1000){
+		  // window.location.href = 'http://www.baoxianshenqi.cn/jiankangrensheng'
+		}
+
 		var deviceWidth = $(window).width()
 		var fontSize = deviceWidth / 1440 * 100 + 'px'
 		$('html').css('font-size',fontSize)
 
-		// $(window).resize(function(){
-		// 	deviceWidth = $(window).width()
-		// 	fontSize = deviceWidth / 1440 * 100 + 'px'
-		// 	$('html').css('font-size',fontSize)
-		// });
-	</script>
-
-	<script>
-		var phoneWidth = parseInt(window.screen.width);
-		// if(phoneWidth>=1000){
-		//   window.location.href = 'http://www.baoxianshenqi.cn'
-		// }
+		$(window).resize(function(){
+			deviceWidth = $(window).width()
+			if(deviceWidth>=1000){
+		  		window.location.href = 'http://www.baoxianshenqi.cn/jiankangrensheng'
+			}
+		});
+		
 		// var titleArr = []
 		if(phoneWidth<1000){
 		  // titleArr.push("互联网＋保险的探索者，<br>致力于创造最好用的展业工具")
@@ -280,28 +281,24 @@
 </div>	
 	
 	<script>
-		  	var $toggle = $('#menu-toggle')
-		    var $html = $('html')
-		    var firstToggle = true
-		    $toggle.click(function(){
-		      if(firstToggle){
-		         setTimeout(function(){
-		                    $toggle.addClass('toggled');
-		                }, 580);
-		        $html.addClass('nav-open')
-		      }else{
-		         setTimeout(function(){
-		                    $toggle.removeClass('toggled');
-		                 }, 550);
-		        $html.removeClass('nav-open')
-		      }
-		      firstToggle = !firstToggle
-		    })
-	</script>
 
-	<script>
-
-
+	  	var $toggle = $('#menu-toggle')
+	    var $html = $('html')
+	    var firstToggle = true
+	    $toggle.click(function(){
+	      if(firstToggle){
+	         setTimeout(function(){
+	                    $toggle.addClass('toggled');
+	                }, 580);
+	        $html.addClass('nav-open')
+	      }else{
+	         setTimeout(function(){
+	                    $toggle.removeClass('toggled');
+	                 }, 550);
+	        $html.removeClass('nav-open')
+	      }
+	      firstToggle = !firstToggle
+	    })
 		
 
 		const IP = '182.254.212.33'
